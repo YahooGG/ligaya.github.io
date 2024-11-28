@@ -1,0 +1,97 @@
+body {
+    background-color: #B0E0E6; /* Powder Blue */
+    font-family: 'Times New Roman', Times, serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    background-color: #ADD8E6; /* Light Blue */
+    border: 2px solid #4682B4; /* Steel Blue for the border */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    width: 300px; /* Default width */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 15px;
+}
+
+.profile-card:hover {
+    transform: scale(1.00);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    font-size: 19px;
+    font-weight: bold;
+    color: #2F4F4F; /* Dark Slate Gray for contrast */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); 
+}
+
+.address, .occupation, .lig, .aya, .ligaya {
+    font-size: 14px;
+    color: #4B0082; /* Indigo for contrast */
+}
+
+.details {
+    display: none;
+    margin-top: 5px;
+    color: #2F4F4F; /* Dark Slate Gray for contrast */
+}
+
+.toggle-details {
+    display: none;
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: #316c9c; /* Steel Blue */
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.toggle-details:checked ~ .details {
+    display: block; 
+}
+
+.profile-card iframe {
+    border-radius: 12px; /* Ensures the iframe has rounded corners */
+    margin-bottom: 15px; /* Adds space between the iframe and the name */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%; /* Full width on smaller screens */
+        margin: 10px; /* Reduce margin */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .name {
+        font-size: 18px; /* Slightly smaller font size */
+    }
+
+    .address, .occupation, .lig, .aya, .ligaya {
+        font-size: 12px; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 16px; /* Further reduce font size for very small screens */
+    }
+
+    .address, .occupation, .lig, .aya, .ligaya {
+        font-size: 11px; /* Further reduce font size */
+    }
+
+    .toggle-button {
+        font-size: 12px; /* Adjust toggle button font size */
+    }
+}
